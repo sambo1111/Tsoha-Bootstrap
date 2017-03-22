@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Muokkaa albumia Light of Worlds</h1>
+
+  <form>
+    <div class="form-group">
+      <label>Nimi</label>
+      <input class="form-control" value="Light of Worlds" type="text">
+    </div>
+    <div class="form-group">
+      <label>Julkaisupäivä</label>
+      <input class="form-control" value="11.11.1981" type="text">
+    </div>
+    <div class="form-group">
+      <label>Yhtye</label>
+      <input class="form-control" value="Kool & The Gang" type="text">
+    </div>
+    <div class="form-group">
+      <label>Kuvaus</label>
+      <textarea class="form-control"> jees jees
+      </textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Tallenna</button>
+    </div>
+  </form>
+{% endblock %}

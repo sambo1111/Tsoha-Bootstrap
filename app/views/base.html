@@ -7,7 +7,7 @@
 
     <title>
       {% block title %}
-        Tietokantasovellus
+        Musiikkitietokanta
       {% endblock %}
     </title>
 
@@ -22,7 +22,7 @@
 
   <body>
 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation">
       <div class="container-fluid">
 
         <div class="navbar-header">
@@ -33,14 +33,18 @@
             <span class="icon-bar"></span>
           </button>
           <!-- Sovelluksen nimi -->
-          <a class="navbar-brand" href="{{base_path}}">Tsoha Bootstrap</a>
+          <a class="navbar-brand" href="{{base_path}}">Musiikkitietokanta</a>
         </div>
 
+          <!-- Navibaari -->
         <div class="collapse navbar-collapse" id="navigation">
-          <ul class="nav navbar-nav">
-            <!-- Navigaation linkit -->
-            <li><a href="{{base_path}}">Etusivu</a></li>
-          </ul>
+           <ul class="nav navbar-nav">
+               <li><a href="#">Albumit</a></li>
+           </ul>
+
+           <ul class="nav navbar-nav navbar-right">
+               <li><a href="#">Kirjaudu sisään</a></li>
+           </ul>
         </div>
       </div>
     </nav>

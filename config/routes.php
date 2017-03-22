@@ -7,3 +7,19 @@
   $routes->get('/hiekkalaatikko', function() {
     HelloWorldController::sandbox();
   });
+  
+  $routes->get('/album', function() {
+    HelloWorldController::album_list();
+  });
+  
+  $routes->get('/album/1', function() {
+    HelloWorldController::album_show();
+  });
+
+  $routes->get('/login', function() {
+    HelloWorldController::login();
+  });
+  
+   $routes->get('/album/1/edit', function() {
+    HelloWorldController::album_edit();
+  });
