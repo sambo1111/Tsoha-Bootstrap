@@ -4,16 +4,28 @@ Harjoitustyöni aihe on musiikkitietokanta, johon tallennetaan albumeiden,
 muusikoiden ja kappaleiden tietoja, joita käyttäjät voivat tarkastella. Käyttäjät voivat
 myös luoda oman albumikokoelmansa sekä tarkastella muiden käyttäjien kokoelmia
 
+## Käyttötapauskaavio
+
+![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/K%C3%A4ytt%C3%B6tapauskaavio.jpg)
+
 ## Käyttötapaukset
 
-- Albumeiden, kappaleiden ja artistien/yhtyeiden tietojen lisääminen kantaan (CRUD näille)
-- Ylläolevien tarkastelu
-- Käyttäjän sisäänkirjautuminen
-- Oman kokoelman tekeminen
+### Admin
+- Albumien, muusikoiden, kappaleiden ja yhtyeiden lisäys, poisto ja muokkaus
+
+### Kuka tahansa
+- Albumien, muusikoiden, kappaleiden ja yhtyeiden tarkasteleminen
+- Rekisteröityminen sovellukseen
+
+### Rekisteröitynyt käyttäjä
+- Sisään- ja uloskirjautuminen
+- Muiden käyttäjien tietojen tarkasteleminen
+- Oman albumilistan luominen tietokannassa olevista albumeista
+- Albumien, muusikoiden, kappaleiden ja yhtyeiden tarkastelu
 
 ## Relaatiokaavio
 
-![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/TSOHA_RELAATIOKAAVIO.jpg)
+![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/K%C3%A4ytt%C3%B6tapauskaavio_1.jpg)
 
 ## Järjestelmän tietosisältö
 
