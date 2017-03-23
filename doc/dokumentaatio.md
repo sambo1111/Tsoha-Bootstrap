@@ -6,7 +6,7 @@ myös luoda oman albumikokoelmansa sekä tarkastella muiden käyttäjien kokoelm
 
 ## Käyttötapauskaavio
 
-![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/K%C3%A4ytt%C3%B6tapauskaavio_1.jpg)
+![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/K%C3%A4ytt%C3%B6tapauskaavio_tsoha.jpg)
 
 ## Käyttötapaukset
 
