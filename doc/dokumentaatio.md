@@ -1,10 +1,23 @@
-# Relaatiokaavio
+# Musiikkitietokanta
+
+Harjoitustyöni aihe on musiikkitietokanta, johon tallennetaan albumeiden,
+muusikoiden ja kappaleiden tietoja, joita käyttäjät voivat tarkastella. Käyttäjät voivat
+myös luoda oman albumikokoelmansa sekä tarkastella muiden käyttäjien kokoelmia
+
+## Käyttötapaukset
+
+- Albumeiden, kappaleiden ja artistien/yhtyeiden tietojen lisääminen kantaan (CRUD näille)
+- Ylläolevien tarkastelu
+- Käyttäjän sisäänkirjautuminen
+- Oman kokoelman tekeminen
+
+## Relaatiokaavio
 
 ![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/TSOHA_RELAATIOKAAVIO.jpg)
 
-# Järjestelmän tietosisältö
+## Järjestelmän tietosisältö
 
-## Band
+### Band
 |Attribuutti|Arvojoukko|Kuvailu|
 |-----------|----------|-------------------------------------------------|
 |name|merkkijono max.50|triviaali|
@@ -12,7 +25,7 @@
 |founded|päivämäärä|perustamisvuosi|
 |added|päivämäärä|milloin lisätty kantaan|
 
-## Album
+### Album
 |Attribuutti|Arvojoukko|Kuvailu|
 |-----------|----------|-------------------------------------------------|
 |band_id|kokonaisluku|foreign key bandiin|
@@ -21,7 +34,7 @@
 |added|päivämäärä|milloin lisätty kantaan|
 |description|merkkijono max.500|albumin kuvaus|
 
-## BandMember
+### BandMember
 |Attribuutti|Arvojoukko|Kuvailu|
 |-----------|----------|-------------------------------------------------|
 |band_id|kokonaisluku|foreign key bandiin|
@@ -29,7 +42,7 @@
 |description|merkkijono max.400|muusikon kuvaus|
 |added|päivämäärä|milloin lisätty kantaan|
 
-## Track
+### Track
 |Attribuutti|Arvojoukko|Kuvailu|
 |-----------|----------|-------------------------------------------------|
 |album_id|kokonaisluku|foreign key albumiin|
@@ -38,13 +51,13 @@
 |added|päivämäärä|milloin lisätty kantaan|
 |length|kokonaisluku|kappaleen pituus sekunteina|
 
-## AppUser
+### AppUser
 |Attribuutti|Arvojoukko|Kuvailu|
 |-----------|----------|-------------------------------------------------|
 |username|merkkijono max.50|käyttäjätunnus|
 |password|merkkijono max.50|salasana|
 
-## UserAlbum
+### UserAlbum
 |Attribuutti|Arvojoukko|Kuvailu|
 |-----------|----------|-------------------------------------------------|
 |user_id|kokonaisluku|foreign key useriin|
