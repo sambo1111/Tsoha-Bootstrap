@@ -1,15 +1,15 @@
 # Musiikkitietokanta
 
-## Johdanto
+## 1. Johdanto
 Harjoitustyöni aihe on musiikkitietokanta, johon tallennetaan albumeiden,
 muusikoiden ja kappaleiden tietoja, joita käyttäjät voivat tarkastella. Käyttäjät voivat
 myös luoda oman albumikokoelmansa sekä tarkastella muiden käyttäjien kokoelmia
 
-## Käyttötapauskaavio
+## 2. Käyttötapauskaavio
 
 ![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/K%C3%A4ytt%C3%B6tapauskaavio.jpg)
 
-## Käyttäjäryhmät
+## 3. Käyttäjäryhmät
 
 ### Admin
 Sovelluksen ylläpitäjä, jonka tehtäviin kuuluu tietokannan ylläpito eli datan lisäys, poisto ja muokkaus.
@@ -20,7 +20,7 @@ Käyttäjä, joka ei ole vielä rekisteröitynyt sovellukseen.
 ### Rekisteröitynyt käyttäjä
 Käyttäjä, joka on rekisteröitynyt sovellukseen.
 
-## Käyttötapaukset
+## 4. Käyttötapaukset
 
 ### Admin
 - Albumien, muusikoiden, kappaleiden ja yhtyeiden lisäys, poisto ja muokkaus
@@ -35,11 +35,11 @@ Käyttäjä, joka on rekisteröitynyt sovellukseen.
 - Oman albumilistan luominen tietokannassa olevista albumeista
 - Albumien, muusikoiden, kappaleiden ja yhtyeiden tarkastelu
 
-## Relaatiokaavio
+## 5. Relaatiokaavio
 
 ![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/TSOHA_RELAATIOKAAVIO.jpg)
 
-## Järjestelmän tietosisältö
+## 6. Järjestelmän tietosisältö
 
 ### Band
 |Attribuutti|Arvojoukko|Kuvailu|
