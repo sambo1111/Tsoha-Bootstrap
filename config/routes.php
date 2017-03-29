@@ -8,8 +8,8 @@
     HelloWorldController::sandbox();
   });
   
-  $routes->get('/album', function() {
-    HelloWorldController::album_list();
+  $routes->get('/album/', function() {
+    AlbumController::index();
   });
   
   $routes->get('/album/1', function() {

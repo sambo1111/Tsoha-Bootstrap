@@ -1,5 +1,5 @@
 <?php
-
+  
   class HelloWorldController extends BaseController{
 
     public static function index(){
@@ -8,8 +8,12 @@
     }
 
     public static function sandbox(){
-      // Testaa koodiasi täällä
-      View::make('login.html');
+      // make-metodi renderöi app/views-kansiossa sijaitsevia tiedostoja
+   	$alb = Album::find(1);
+        $albums = Album::all();
+        // Kint-luokan dump-metodi tulostaa muuttujan arvon
+        Kint::dump($albums);
+        Kint::dump($alb);
     }
     
     public static function album_list() {
