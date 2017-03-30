@@ -1,30 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Albumit</h1>
+    <h1>Yhtyeet</h1>
 
   <p>
-    <a href="#" class="btn btn-success">Lisää albumi</a>
+    <a href="#" class="btn btn-success">Lisää Yhtye</a>
   </p>
 
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
         <th>Nimi</th>
-        <th>Julkaisupäivä</th>
-        <th>Yhtye</th>
+        <th>Kuvaus</th>
+        <th>Perustettu</th>
         <th>Lisäyspäivä</th>
         <th></th>
       </tr>
     </thead>
 
     <tbody>
-      <!-- Listataan albumit -->
-      {% for album in albums %}
+      <!-- Listataan bändit -->
+      {% for band in bands %}
       <tr>
-          <td><a href="{{base_path}}/album/{{album.id}}">{{album.name}}</td>
-        <td>{{album.release_date}}</td>
-        <td>{{album.band_id}}</td>
-        <td>{{album.added}}</td>
+          <td><a href="{{base_path}}/band/{{band.id}}">{{band.name}}</td>
+        <td>{{band.description}}</td>
+        <td>{{band.founded}}</td>
+        <td>{{band.added}}</td>
         <th><a class="btn btn-default btn-sm" href="#">Muokkaa</a></th>
       </tr>
       {% endfor %}

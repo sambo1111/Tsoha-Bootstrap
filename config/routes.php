@@ -23,3 +23,20 @@
    $routes->get('/album/1/edit', function() {
     HelloWorldController::album_edit();
   });
+  
+    $routes->get('/band/', function() {
+    BandController::index();
+  });
+  
+  $routes->post('/band', function(){
+    BandController::store();
+  });
+  
+  $routes->get('/band/new', function(){
+    BandController::create();
+  });
+  
+   $routes->get('/band/:id', function($id){
+    BandController::show($id);
+  });
+ 

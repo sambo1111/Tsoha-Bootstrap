@@ -34,13 +34,6 @@ class Album extends BaseModel {
         return $albums;
     }
     
-    public static function find_band($id) {
-        $query = DB::connection()->prepare('SELECT Band FROM Album,Band WHERE Album.band_id = Band.id');
-        $query->execute();
-        $band = $query->fetch();
-        return $band;
-    }
-    
     public static function find($id) {
         $query = DB::connection()->prepare('SELECT * FROM Album WHERE id = :id LIMIT 1');
         $query->execute(array('id' => $id));
