@@ -10,6 +10,11 @@ Sivujen linkit:
 * [Albumien lista](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/album)
 * [Albumin esittelysivu](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/album/1)
 * [Albumin muokkaussivu](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/album/1/edit)
+
+* [Yhtyeiden lista](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/band/)
+* [Yhtyeen luomis sivu](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/band/new)
+* [Yhtyeen esittelysivu](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/band/1)
+
 * [Kirjautumissivu](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/login)
 ## Työn aihe
 
