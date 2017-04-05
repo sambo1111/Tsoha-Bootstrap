@@ -39,4 +39,18 @@
    $routes->get('/band/:id', function($id){
     BandController::show($id);
   });
+  
+  $routes->get('/band/:id/edit', function($id){
+    BandController::edit($id);
+  });
+  
+  $routes->post('/band/:id/edit', function($id){
+
+    BandController::update($id);
+  });
+
+  $routes->post('/band/:id/destroy', function($id){
+
+    BandController::destroy($id);
+  });
  

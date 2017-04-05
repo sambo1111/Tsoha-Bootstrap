@@ -37,5 +37,37 @@ class BandController extends BaseController {
         
     }
     
+    public static function edit($id){
+        $band = Band::find($id);
+        View::make('band/edit.html', array('band' => $band));
+    }
+    
+    public static function update($id){
+        $params = $_POST;
+
+        $attributes = array(
+          'id' => $id,
+          'name' => $params['name'],
+          'description' => $params['description'],
+          'founded' => $params['founded']
+        );
+
+        $band = new Band($attributes);
+        $errors = $band->errors();
+
+        if(count($errors) > 0){
+          View::make('band/edit.html', array('errors' => $errors, 'band' => $band));
+        }else{
+          $band->update();
+
+          Redirect::to('/band/' . $band->id, array('message' => 'Yhtyeen muokkaus onnistui!'));
+        }
+    }
+    
+    public static function destroy($id) {
+        $band = $band = Band::find($id);
+        $band->destroy();
+        Redirect::to('/band/', array('message' => 'Yhtyeen poisto onnistui!'));
+    } 
 }
 

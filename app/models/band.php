@@ -5,6 +5,7 @@ class Band extends BaseModel {
     
     public function __construct($attr) {
         parent::__construct($attr);
+        $this->validators = array('validate_name', 'validate_description', 'validate_added');
     }
     
     public static function all() {
@@ -23,8 +24,7 @@ class Band extends BaseModel {
                 'id' => $row['id'],
                 'name' => $row['name'],
                 'description' => $row['description'],
-                'founded' => $row['added'],
-                'added' => $row['added']        
+                'founded' => $row['founded']     
                 
             ));
             
@@ -45,8 +45,7 @@ class Band extends BaseModel {
                 'id' => $row['id'],
                 'name' => $row['name'],
                 'description' => $row['description'],
-                'founded' => $row['added'],
-                'added' => $row['added'] 
+                'founded' => $row['founded']
                 
             ));
             
@@ -64,6 +63,20 @@ class Band extends BaseModel {
         $row = $query->fetch();
         $this->id = $row['id'];
       
+    }
+    
+    public function update() {
+        
+        $query = DB::connection()->prepare('UPDATE Band SET (name, description, founded) = (:name, :description, :founded) WHERE id = :id');
+        $query->execute(array('id' => $this->id ,'name' => $this->name, 'description' => $this->description, 'founded' => $this->founded));
+        
+    }
+    
+    public function destroy() {
+        
+        $query = DB::connection()->prepare('DELETE FROM Band WHERE id = :id');
+        $query->execute(array('id' => $this->id));
+        
     }
 }
 

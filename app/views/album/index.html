@@ -12,7 +12,6 @@
         <th>Nimi</th>
         <th>Julkaisupäivä</th>
         <th>Yhtye</th>
-        <th>Lisäyspäivä</th>
         <th></th>
       </tr>
     </thead>
@@ -21,10 +20,9 @@
       <!-- Listataan albumit -->
       {% for album in albums %}
       <tr>
-          <td><a href="{{base_path}}/album/{{album.id}}">{{album.name}}</td>
+        <td><a href="{{base_path}}/album/{{album.id}}">{{album.name}}</td>
         <td>{{album.release_date}}</td>
-        <td>{{album.band_id}}</td>
-        <td>{{album.added}}</td>
+        <td><a href="{{base_path}}/band/{{album.band_id}}">{{album.band.name}}</td>
         <th><a class="btn btn-default btn-sm" href="#">Muokkaa</a></th>
       </tr>
       {% endfor %}

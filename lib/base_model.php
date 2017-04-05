@@ -25,5 +25,18 @@
 
       return $errors;
     }
+    
+    public function validate_string_length($string, $length){
+        
+        $errors = array();
+        if($string == '' || $string == null){
+          $errors[] = 'Nimi ei saa olla tyhjä!';
+        }
+        if(strlen($length) < 2){
+          $errors[] = 'Nimen pituuden tulee olla vähintään 2 merkkiä!';
+        }
+
+        return $errors;
+      }
 
   }

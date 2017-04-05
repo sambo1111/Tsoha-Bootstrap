@@ -24,7 +24,6 @@ class Album extends BaseModel {
                 'band_id' => $row['band_id'],
                 'name' => $row['name'],
                 'release_date' => $row['release_date'],
-                'added' => $row['added'],
                 'description' => $row['description']
                 
             ));
@@ -46,7 +45,6 @@ class Album extends BaseModel {
                 'band_id' => $row['band_id'],
                 'name' => $row['name'],
                 'release_date' => $row['release_date'],
-                'added' => $row['added'],
                 'description' => $row['description']
                 
             ));
