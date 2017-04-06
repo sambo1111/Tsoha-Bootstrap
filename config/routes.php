@@ -12,8 +12,8 @@
     AlbumController::index();
   });
   
-  $routes->get('/album/1', function() {
-    HelloWorldController::album_show();
+  $routes->get('/album/:id', function($id) {
+    AlbumController::show($id);
   });
 
   $routes->get('/login', function() {
@@ -53,4 +53,18 @@
 
     BandController::destroy($id);
   });
+  
+  $routes->get('/login', function(){
+
+    UserController::login();
+  });
  
+  $routes->post('/login', function(){
+
+    UserController::authenticate_user();
+  });
+  
+  $routes->get('/user/:id', function($id) {
+      
+      UserController::show($id);
+  });

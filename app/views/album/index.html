@@ -2,9 +2,11 @@
 {% block content %}
   <h1>Albumit</h1>
 
+  <!--
   <p>
     <a href="#" class="btn btn-success">Lisää albumi</a>
   </p>
+  -->
 
   <table class="table table-striped table-bordered">
     <thead>
@@ -12,7 +14,6 @@
         <th>Nimi</th>
         <th>Julkaisupäivä</th>
         <th>Yhtye</th>
-        <th></th>
       </tr>
     </thead>
 
@@ -22,8 +23,7 @@
       <tr>
         <td><a href="{{base_path}}/album/{{album.id}}">{{album.name}}</td>
         <td>{{album.release_date}}</td>
-        <td><a href="{{base_path}}/band/{{album.band_id}}">{{album.band.name}}</td>
-        <th><a class="btn btn-default btn-sm" href="#">Muokkaa</a></th>
+        <td><a href="{{base_path}}/band/{{album.band_id}}">{{album.band_name}}</td>
       </tr>
       {% endfor %}
     </tbody>

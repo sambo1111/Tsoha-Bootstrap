@@ -1,19 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Kirjaudu sisään</h1>
+  <h1>Kirjautuminen</h1>
 
-  <!-- Kaikki lomakkeen elementit form-tagin sisään -->
-  <form>
-    <!-- Tekstikenttä käyttäjätunnukselle -->
+  <form method="post" action="{{base_path}}/login">
     <div class="form-group">
-      <label>Käyttäjätunnus</label>
-      <input class="form-control" type="text">
+      <label>Käyttäjätunnus:</label>
+      <input class="form-control" name="name" value="{{name}}" type="text">
     </div>
 
-    <!-- Salasanakenttä salasanalle -->
     <div class="form-group">
-      <label>Salasana</label>
-      <input class="form-control" type="password">
+      <label>Salasana:</label>
+      <input class="form-control" name="password" value="{{password}}" type="password">
     </div>
 
     <button type="submit" class="btn btn-primary">Kirjaudu sisään</button>

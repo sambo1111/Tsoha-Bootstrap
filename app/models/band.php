@@ -5,7 +5,7 @@ class Band extends BaseModel {
     
     public function __construct($attr) {
         parent::__construct($attr);
-        $this->validators = array('validate_name', 'validate_description', 'validate_added');
+        $this->validators = array('validate_name', 'validate_description');
     }
     
     public static function all() {
@@ -78,5 +78,27 @@ class Band extends BaseModel {
         $query->execute(array('id' => $this->id));
         
     }
+    
+    public function validate_name(){
+        $errors = array();
+        if($this->name == '' || $this->name == null){
+           $errors[] = 'Nimi ei saa olla tyhjä!';
+        }
+
+        return $errors;
+    }
+    
+    public function validate_description(){
+        $errors = array();
+        if($this->description == '' || $this->description == null){
+           $errors[] = 'Kuvaus ei saa olla tyhjä.';
+        }
+        if(strlen($this->description) < 10){
+           $errors[] = 'Kuvauksen pituuden tulee olla vähintään 10 merkkiä.';
+        }
+
+        return $errors;
+    }
+    
 }
 

@@ -1,7 +1,7 @@
 <?php
 
 class Album extends BaseModel {
-    public $id, $band_id, $name, $release_date, $added, $description;
+    public $id, $band_id, $name, $release_date, $added, $description, $band_name;
     
     public function __construct($attr) {
         parent::__construct($attr);
@@ -18,17 +18,20 @@ class Album extends BaseModel {
         
         foreach($rows as $row) {
             
+            $band_name = Band::find($row['band_id'])->name;
             $albums[] = new Album(array(
                 
                 'id' => $row['id'],
                 'band_id' => $row['band_id'],
                 'name' => $row['name'],
                 'release_date' => $row['release_date'],
-                'description' => $row['description']
+                'description' => $row['description'],
+                'band_name' => $band_name
                 
             ));
             
         }
+        
         
         return $albums;
     }
@@ -39,13 +42,15 @@ class Album extends BaseModel {
         $row = $query->fetch();
         
         if($row) {
+            $band_name = Band::find($row['band_id'])->name;
             $album = new Album(array(
                
                 'id' => $row['id'],
                 'band_id' => $row['band_id'],
                 'name' => $row['name'],
                 'release_date' => $row['release_date'],
-                'description' => $row['description']
+                'description' => $row['description'],
+                'band_name' => $band_name
                 
             ));
             

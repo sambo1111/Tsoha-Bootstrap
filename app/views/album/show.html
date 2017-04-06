@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>{{album.name}}</h1>
+  <!-- Tiedot tulee listana tähän -->
+  <ul>
+      <li> <strong> Yhtye: </strong><a href="{{base_path}}/band/{{album.band_id}}">{{album.band_name}}</a></li>
+      <li> <strong> Julkaistu: </strong> {{album.release_date}}</li>
+  </ul>
+  
+  <p> {{album.description}} </p>
+{% endblock %}

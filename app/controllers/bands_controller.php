@@ -30,10 +30,16 @@ class BandController extends BaseController {
            'founded' => $params['founded']
         ));
         
-        Kint::dump($params);
-        $band->save();
+        $errors = $band->errors();
         
-        Redirect::to('/band/' . $band->id, array('message' => 'Yhtye on lisätty kirjastoosi!'));
+        if (count($errors) > 1) {
+            Redirect::to('/band/', array('message' => 'Virheelliset tiedot lisäyksessä!'));
+         
+        } else {
+            
+            $band->save();
+            Redirect::to('/band/' . $band->id, array('message' => 'Yhtye on lisätty kirjastoosi!'));
+        }
         
     }
     
