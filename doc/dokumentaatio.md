@@ -6,7 +6,7 @@ muusikoiden ja kappaleiden tietoja, joita käyttäjät voivat tarkastella. Käyt
 myös luoda oman albumikokoelmansa sekä tarkastella muiden käyttäjien kokoelmia
 
 ## 2. Käynnistys -ja käyttöohje
-Sovellukseen pääsee tästä * [linkistä](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/)
+Sovellukseen pääsee tästä [linkistä](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/).
 Kirjautuminen onnistuu käyttäjätunnuksella "bestuser" ja salasanalla "salainen".
 Onnistuneen kirjautumisen jälkeen sovelluksen oikeaan ylälaitaan ilmestyy linkki tällä hetkellä kirjautuneena olevan käyttäjän esittelysivulle.
 
@@ -16,15 +16,15 @@ Yhtyeen esittelysivulla voi muokata tai poistaa yhtyeen tietoja.
 
 Albumien sivulle pääsee linkistä Albumit, jossa on lista tietokannassa olevista albumeista. Albumin esittelysivulle pääsee painamalla albumin nimeä. Sivulla on myös linkit albumien yhtyeiden sivuille jokaista albumia kohti.
 
-## 2. Käsitekaavio
+## 3. Käsitekaavio
 
 ![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/kaavio.jpg)
 
-## 3. Käyttötapauskaavio
+## 4. Käyttötapauskaavio
 
 ![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/K%C3%A4ytt%C3%B6tapauskaavio.jpg)
 
-## 4. Käyttäjäryhmät
+## 5. Käyttäjäryhmät
 
 ### Admin
 Sovelluksen ylläpitäjä, jonka tehtäviin kuuluu tietokannan ylläpito eli datan lisäys, poisto ja muokkaus.
@@ -35,7 +35,7 @@ Käyttäjä, joka ei ole vielä rekisteröitynyt sovellukseen.
 ### Rekisteröitynyt käyttäjä
 Käyttäjä, joka on rekisteröitynyt sovellukseen.
 
-## 5. Käyttötapaukset
+## 6. Käyttötapaukset
 
 ### Admin
 - Albumien, muusikoiden, kappaleiden ja yhtyeiden lisäys, poisto ja muokkaus
@@ -50,11 +50,11 @@ Käyttäjä, joka on rekisteröitynyt sovellukseen.
 - Oman albumilistan luominen tietokannassa olevista albumeista
 - Albumien, muusikoiden, kappaleiden ja yhtyeiden tarkastelu
 
-## 6. Relaatiokaavio
+## 7. Relaatiokaavio
 
 ![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/TSOHA_RELAATIOKAAVIO.jpg)
 
-## 7. Järjestelmän tietosisältö
+## 8. Järjestelmän tietosisältö
 
 ### Band
 |Attribuutti|Arvojoukko|Kuvailu|
