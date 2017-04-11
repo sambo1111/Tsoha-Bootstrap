@@ -1,8 +1,9 @@
 <?php
 
   class DB{
-
+      
       public static function connection(){
+          
         // Haetaan tietokantakonfiguraatio
         $connection_config = DatabaseConfig::connection_config();
         $config = $connection_config['config'];

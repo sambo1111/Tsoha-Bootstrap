@@ -11,7 +11,9 @@ class AlbumController extends BaseController {
     public static function show($id) {
         
         $album = Album::find($id);
-        View::make('album/show.html', array('album' => $album));
+        $album_tracks = Track::findAlbumTracks($id);
+        
+        View::make('album/show.html', array('album' => $album, 'album_tracks' => $album_tracks));
         
     }
 }

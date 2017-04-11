@@ -8,4 +8,25 @@
   </ul>
   
   <p> {{album.description}} </p>
+  
+  
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Nimi</th>
+        <th>Pituus</th>
+      </tr>
+    </thead>
+    
+    <h2> Kappaleet </h2>
+    <tbody>
+      <!-- Listataan albumin kappaleet -->
+      {% for track in album_tracks %}
+      <tr>
+        <td><a href="{{base_path}}/track/{{track.id}}">{{track.name}}</td>
+        <td>{{track.track_length}} s</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endblock %}

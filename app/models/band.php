@@ -1,7 +1,7 @@
 <?php
 
 class Band extends BaseModel {
-    public $id, $name, $description, $founded, $added;
+    public $id, $name, $description, $founded;
     
     public function __construct($attr) {
         parent::__construct($attr);

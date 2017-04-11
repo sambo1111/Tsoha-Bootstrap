@@ -42,7 +42,9 @@ class Album extends BaseModel {
         $row = $query->fetch();
         
         if($row) {
+            
             $band_name = Band::find($row['band_id'])->name;
+            
             $album = new Album(array(
                
                 'id' => $row['id'],
@@ -57,6 +59,31 @@ class Album extends BaseModel {
             return $album;
         }
         return null;
+    }
+    
+    public static function findBandAlbums($id) {
+        
+        $query = DB::connection()->prepare('SELECT * FROM Album WHERE band_id = :id');
+        $query->execute(array('id' => $id));
+        
+        $rows = $query->fetchAll();
+        
+        $albums = array();
+        
+        foreach($rows as $row) {
+            
+            $albums[] = new Album(array(
+                
+                'id' => $row['id'],
+                'band_id' => $row['band_id'],
+                'name' => $row['name'],
+                'release_date' => $row['release_date'],
+                'description' => $row['description'],
+                
+            ));
+            
+        }
+        return $albums;
     }
 }
 

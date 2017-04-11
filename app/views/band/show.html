@@ -7,6 +7,24 @@
     <li><strong>Kuvaus:</strong> {{band.description}} </li>
   </ul>
   
+<table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Nimi</th>
+      </tr>
+    </thead>
+    
+    <h2> Albumit </h2>
+    <tbody>
+      <!-- Listataan albumin kappaleet -->
+      {% for album in band_albums %}
+      <tr>
+        <td><a href="{{base_path}}/album/{{album.id}}">{{album.name}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
   <!-- Painikkeet tähän -->
   <p>
     <form method="post" action="{{base_path}}/band/{{band.id}}/destroy" style="display: inline-block;">

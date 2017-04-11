@@ -24,7 +24,7 @@
     HelloWorldController::album_edit();
   });
   
-    $routes->get('/band/', function() {
+  $routes->get('/band/', function() {
     BandController::index();
   });
   
@@ -36,7 +36,7 @@
     BandController::create();
   });
   
-   $routes->get('/band/:id', function($id){
+  $routes->get('/band/:id', function($id){
     BandController::show($id);
   });
   
@@ -67,4 +67,12 @@
   $routes->get('/user/:id', function($id) {
       
       UserController::show($id);
+  });
+  
+  $routes->get('/track/', function() {
+    TrackController::index();
+  });
+  
+  $routes->get('/track/:id', function($id){
+    TrackController::show($id);
   });
