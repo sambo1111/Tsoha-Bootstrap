@@ -8,20 +8,20 @@
     HelloWorldController::sandbox();
   });
   
+  $routes->post('/album', function() {
+     AlbumController::store();
+  });
+  
+  $routes->get('/album/new/:id', function($id) {
+     AlbumController::create($id);
+  });
+  
   $routes->get('/album/', function() {
     AlbumController::index();
   });
   
   $routes->get('/album/:id', function($id) {
     AlbumController::show($id);
-  });
-
-  $routes->get('/login', function() {
-    HelloWorldController::login();
-  });
-  
-   $routes->get('/album/1/edit', function() {
-    HelloWorldController::album_edit();
   });
   
   $routes->get('/band/', function() {
@@ -70,9 +70,22 @@
   });
   
   $routes->get('/track/', function() {
-    TrackController::index();
+      TrackController::index();
   });
   
+  $routes->post('/track', function() {
+      TrackController::store();
+  });
+  
+  $routes->get('/track/new/:id', function($id) {
+      TrackController::create($id);
+  });
+  
+  
   $routes->get('/track/:id', function($id){
-    TrackController::show($id);
+      TrackController::show($id);
+  });
+  
+  $routes->get('/band_member/:id', function($id){
+      BandMemberController::show($id);
   });

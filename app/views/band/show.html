@@ -16,10 +16,32 @@
     
     <h2> Albumit </h2>
     <tbody>
-      <!-- Listataan albumin kappaleet -->
+      <!-- Listataan albumin -->
       {% for album in band_albums %}
       <tr>
         <td><a href="{{base_path}}/album/{{album.id}}">{{album.name}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+  <p>
+    <a href="{{base_path}}/album/new/{{band.id}}" class="btn btn-success">Lisää Albumi Yhtyeelle</a>
+  </p>
+  
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Nimi</th>
+      </tr>
+    </thead>
+    
+    <h2> Jäsenet </h2>
+    <tbody>
+      <!-- Listataan jäsenet-->
+      {% for band_member in band_members %}
+      <tr>
+        <td><a href="{{base_path}}/band_member/{{band_member.id}}">{{band_member.name}}</td>
       </tr>
       {% endfor %}
     </tbody>

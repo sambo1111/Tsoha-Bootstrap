@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Lisää Kappale </h1>
+
+<form method="post" action="{{base_path}}/track">
+    <div class="form-group">
+      <label>Nimi</label>
+      <input type="text" name="name" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <label>Pituus (sec)</label>
+      <input type="text" name="track_length" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <input type="hidden" value="{{album_id}}" name="album_id" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Lisää</button>
+    </div>
+</form>
+
+{% endblock %}

@@ -11,9 +11,10 @@ class BandController extends BaseController {
     public static function show($id) {
         
         $band_albums = Album::findBandAlbums($id);
+        $band_members = BandMember::findBandMembers($id);
         
         $band = Band::find($id);
-        View::make('band/show.html', array('band' => $band, 'band_albums' => $band_albums));
+        View::make('band/show.html', array('band' => $band, 'band_albums' => $band_albums, 'band_members' => $band_members));
         
     }
     

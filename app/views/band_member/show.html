@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>{{band_member.name}}</h1>
+  <ul>
+    <li><strong>Yhtye:</strong> <a href="{{base_path}}/band/{{band_member.band_id}}"> {{band_member.band_name}} </a> </li>
+    <li><strong>Kuvaus:</strong>{{band_member.description}}</li>
+  </ul>
+  
+{% endblock %}

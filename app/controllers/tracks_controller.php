@@ -16,5 +16,34 @@ class TrackController extends BaseController {
         
     }
     
+    public static function create($id) {
+        
+        View::make('track/new.html', array('album_id' => $id));
+        
+    }
+    
+    public static function store() {
+        
+        $params = $_POST;
+        
+        $track = new Track(array(
+           'name' => $params['name'],
+           'track_length' => $params['track_length'],
+           'album_id' => $params['album_id']
+        ));
+        
+        $errors = $track->errors();
+        
+        if (count($errors) > 1) {
+            Redirect::to('/album/', array('message' => 'Virheelliset tiedot lisäyksessä!'));
+         
+        } else {
+            
+            $track->save();
+            Redirect::to('/album/' . $track->album_id, array('message' => 'Kappale on lisätty kirjastoosi!'));
+        }
+        
+    }
+    
 }
 

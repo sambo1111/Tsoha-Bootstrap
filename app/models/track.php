@@ -6,7 +6,7 @@ class Track extends BaseModel {
     
     public function __construct($attr) {
         parent::__construct($attr);
-        $this->validators = array('validate_name', 'validate_description');
+        $this->validators = array();
     }
     
     public static function all() {
@@ -87,6 +87,15 @@ class Track extends BaseModel {
         
         return $tracks;
         
+    }
+    
+    public function save() {
+        
+        $query = DB::connection()->prepare('INSERT INTO Track (name, track_length, album_id) VALUES (:name, :track_length, :album_id) RETURNING id');
+        $query->execute(array('name' => $this->name, 'track_length' => $this->track_length, 'album_id' => $this->album_id));
+        $row = $query->fetch();
+        $this->id = $row['id'];
+      
     }
 }
 
