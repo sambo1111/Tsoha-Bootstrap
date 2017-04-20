@@ -8,13 +8,13 @@ myös luoda oman albumikokoelmansa sekä tarkastella muiden käyttäjien kokoelm
 ## 2. Käynnistys -ja käyttöohje
 Sovellukseen pääsee tästä [linkistä](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/).
 Kirjautuminen onnistuu käyttäjätunnuksella "bestuser" ja salasanalla "salainen".
-Onnistuneen kirjautumisen jälkeen sovelluksen oikeaan ylälaitaan ilmestyy linkki tällä hetkellä kirjautuneena olevan käyttäjän esittelysivulle.
+Onnistuneen kirjautumisen jälkeen sovelluksen oikeaan ylälaitaan ilmestyy linkki tällä hetkellä kirjautuneena olevan käyttäjän esittelysivulle, sekä uloskirjautumislinkki.
 
-Yhtyeitä voi tarkastella sivulta "Yhtyeet", jossa voi lisätä uusia yhtyeitä tai siirtyä jonkun tietokannassa olevan yhtyeen esittelysivulle.
+Yhtyeitä voi tarkastella sivulta "Yhtyeet", jossa voi lisätä uusia yhtyeitä tai siirtyä jonkun tietokannassa olevan yhtyeen esittelysivulle. Yhtyeen sivulla näkyy kaikki sen jäsenet, sekä linkit jäsenien sivulla, kuten myös yhtyeen albumit ja linkit niiden sivuille.
 
 Yhtyeen esittelysivulla voi muokata tai poistaa yhtyeen tietoja.
 
-Albumien sivulle pääsee linkistä Albumit, jossa on lista tietokannassa olevista albumeista. Albumin esittelysivulle pääsee painamalla albumin nimeä. Sivulla on myös linkit albumien yhtyeiden sivuille jokaista albumia kohti.
+Albumien sivulle pääsee linkistä Albumit, jossa on lista tietokannassa olevista albumeista. Albumin esittelysivulle pääsee painamalla albumin nimeä. Sivulla on myös linkit albumien yhtyeiden sivuille jokaista albumia kohti. Albumin sivulta löytyy myös kaikki albumiin kuuluvat kappaleet, joiden nimeä klikkaamalla pääsee kappaleen sivulle. Albumin sivulla voi myös lisätä kappaleita albumii linkistä "lisää kappale albumiin". Kirjautunut käyttäjä voi myös lisätä albumeita omaan albumikokoelmaansa albumin sivulla olevasta linkistä "Lisää albumi kokoelmaasi". Omaa albumikokoelmaa voi tarkastella käyttäjän sivuilla klikkaamalla sivun ylälaidassa olevaa käyttäjätunnusta.
 
 ## 3. Käsitekaavio
 
