@@ -3,4 +3,26 @@
   <h1>{{user.name}}</h1>
   <!-- Tiedot tulee listana tähän -->
 
+  <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Nimi</th>
+          <th>Julkaistu</th>
+          <th>Yhtye</th>
+        </tr>
+      </thead>
+
+      <h2> Käyttäjän albumit </h2>
+      <tbody>
+        <!-- Listataan albumin -->
+        {% for album in user_albums %}
+        <tr>
+          <td><a href="{{base_path}}/album/{{album.id}}">{{album.name}}</td>
+          <td>{{album.release_date}}</td>
+          <td><a href="{{base_path}}/band/{{album.band_id}}">{{album.band_name}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+
 {% endblock %}
