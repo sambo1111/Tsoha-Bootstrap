@@ -38,7 +38,7 @@ class BandController extends BaseController {
         $errors = $band->errors();
 
         if (count($errors) > 1) {
-            Redirect::to('/band/', array('message' => 'Virheelliset tiedot lisäyksessä!'));
+            Redirect::to('/band/', array('error' => 'Virheelliset tiedot lisäyksessä!'));
 
         } else {
 

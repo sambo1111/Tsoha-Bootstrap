@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Lisää Jäsen </h1>
+
+<form method="post" action="{{base_path}}/band_member">
+    <div class="form-group">
+      <label>Nimi</label>
+      <input type="text" name="name" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <input type="hidden" value="{{band_id}}" name="band_id" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Kuvaus</label>
+      <input type="text" name="description" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Lisää</button>
+    </div>
+</form>
+
+{% endblock %}

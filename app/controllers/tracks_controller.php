@@ -36,7 +36,7 @@ class TrackController extends BaseController {
         $errors = $track->errors();
 
         if (count($errors) > 1) {
-            Redirect::to('/album/', array('message' => 'Virheelliset tiedot lisäyksessä!'));
+            Redirect::to('/album/', array('error' => 'Virheelliset tiedot lisäyksessä!'));
 
         } else {
 

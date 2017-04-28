@@ -45,9 +45,9 @@
            {% if user_logged_in %}
            <ul class="nav navbar-nav navbar-right">
                <li> <a href="{{base_path}}/user/{{user_logged_in.id}}">{{user_logged_in.name}}</a></li>
-               <form method="post" action="{{base_path}}/logout" style="display: inline-block;">
+               <li><form method="post" action="{{base_path}}/logout" style="display: inline-block;">
                    <button type="submit" class="btn btn-primary">Kirjaudu ulos</button>
-               </form>
+               </form></li>
            </ul>
            {% else %}
            <ul class="nav navbar-nav navbar-right">

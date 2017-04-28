@@ -19,7 +19,7 @@ class AlbumController extends BaseController {
     }
 
     public static function create($id) {
-      
+
         self::check_logged_in();
         View::make('album/new.html', array('band_id' => $id));
 
@@ -39,7 +39,7 @@ class AlbumController extends BaseController {
         $errors = $album->errors();
 
         if (count($errors) > 1) {
-            Redirect::to('/album/', array('message' => 'Virheelliset tiedot lisäyksessä!'));
+            Redirect::to('/album/', array('error' => 'Virheelliset tiedot lisäyksessä!'));
 
         } else {
 
@@ -47,5 +47,11 @@ class AlbumController extends BaseController {
             Redirect::to('/band/' . $album->band_id, array('message' => 'Albumi on lisätty kirjastoosi!'));
         }
 
+    }
+
+    public static function destroy($id) {
+        $album = $album = Album::find($id);
+        $album->destroy();
+        Redirect::to('/album/', array('message' => 'Albumin poisto onnistui!'));
     }
 }

@@ -24,6 +24,10 @@
     AlbumController::show($id);
   });
 
+  $routes->post('/album/:id/destroy', function($id){
+    AlbumController::destroy($id);
+  });
+
   $routes->post('/album/:id', function($id) {
     UserAlbumController::store($id);
   });
@@ -90,8 +94,20 @@
       TrackController::show($id);
   });
 
+  $routes->get('/band_member/new/:id', function($id) {
+      BandMemberController::create($id);
+  });
+
+  $routes->post('/band_member', function() {
+      BandMemberController::store();
+  });
+
   $routes->get('/band_member/:id', function($id){
       BandMemberController::show($id);
+  });
+
+  $routes->post('/band_member/:id/destroy', function($id){
+    BandMemberController::destroy($id);
   });
 
   $routes->post('/logout', function(){
