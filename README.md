@@ -1,5 +1,5 @@
 # Tietokantasovelluksen esittelysivu
-
+Kirjautuminen onnistuu käyttäjätunnuksella "bestuser" ja salasanalla "salainen". 
 Yleisiä linkkejä:
 
 * [Linkki sovellukseeni](http://hasasami.users.cs.helsinki.fi/musiikkitietokanta/)
