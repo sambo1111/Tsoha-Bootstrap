@@ -6,10 +6,15 @@
     <li><strong>Kuvaus:</strong>{{band_member.description}}</li>
   </ul>
 
-  <p>
-    <form method="post" action="{{base_path}}/band_member/{{band_member.id}}/destroy" style="display: inline-block;">
-        <button type="submit" class="btn btn-danger">Poista</button>
-    </form>
-  </p>
+
+  {% if user_logged_in %}
+    {% if user_logged_in.is_admin == 1%}  
+      <p>
+        <form method="post" action="{{base_path}}/band_member/{{band_member.id}}/destroy" style="display: inline-block;">
+          <button type="submit" class="btn btn-danger">Poista</button>
+        </form>
+      </p>
+    {% endif %}
+  {% endif %}
 
 {% endblock %}

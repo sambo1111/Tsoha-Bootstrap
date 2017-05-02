@@ -9,6 +9,10 @@ class UserAlbumController extends BaseController {
        'album_id' => $id,
     ));
 
+    if (UserAlbum::check_if_user_has_album($id, $_SESSION['user']) == true) {
+      Redirect::to('/album/' . $id, array('error' => 'Olet jo lisännyt albumin kokoelmaasi!'));
+    }
+
     $errors = $user_album->errors();
 
     if (count($errors) > 1) {

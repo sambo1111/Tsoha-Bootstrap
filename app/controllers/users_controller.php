@@ -34,4 +34,36 @@ class UserController extends BaseController {
         $_SESSION['user'] = null;
         Redirect::to('/login', array('message' => 'Olet kirjautunut ulos!'));
     }
+
+    public static function store() {
+
+        $params = $_POST;
+
+        if ($params['password'] != $params['password_confirmation']) {
+          Redirect::to('/register/', array('error' => 'Virheellinen syöte!'));
+        }
+
+        $user = new AppUser(array(
+           'name' => $params['name'],
+           'password' => $params['password']
+        ));
+
+        $errors = $user->errors();
+
+        if (count($errors) > 1) {
+            Redirect::to('/register/', array('error' => 'Virheelliset tiedot lisäyksessä!'));
+
+        } else {
+
+            $user->save();
+            Redirect::to('/band/', array('message' => 'Käyttäjä on luotu!'));
+        }
+
+    }
+
+    public static function create() {
+
+        View::make('user/new.html');
+
+    }
 }

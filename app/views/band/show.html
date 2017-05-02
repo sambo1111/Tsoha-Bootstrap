@@ -34,9 +34,13 @@
     </tbody>
   </table>
 
-  <p>
-    <a href="{{base_path}}/album/new/{{band.id}}" class="btn btn-success">Lisää Albumi Yhtyeelle</a>
-  </p>
+  {% if user_logged_in %}
+    {% if user_logged_in.is_admin == 1%}  
+    <p>
+      <a href="{{base_path}}/album/new/{{band.id}}" class="btn btn-success">Lisää Albumi Yhtyeelle</a>
+    </p>
+    {% endif %}
+  {% endif %}
 
   <table class="table table-striped table-bordered">
     <thead>
@@ -56,15 +60,19 @@
     </tbody>
   </table>
 
-  <p>
-    <a href="{{base_path}}/band_member/new/{{band.id}}" class="btn btn-success">Lisää Jäsen</a>
-  </p>
-
   <!-- Painikkeet tähän -->
-  <p>
-    <form method="post" action="{{base_path}}/band/{{band.id}}/destroy" style="display: inline-block;">
-        <button type="submit" class="btn btn-danger">Poista</button>
-    </form>
-    <a href="{{base_path}}/band/{{band.id}}/edit" class="btn btn-default">Muokkaa</a>
-  </p>
+  {% if user_logged_in %}
+    {% if user_logged_in.is_admin == 1%}
+      <p>
+        <a href="{{base_path}}/band_member/new/{{band.id}}" class="btn btn-success">Lisää Jäsen</a>
+      </p>
+
+      <p>
+        <form method="post" action="{{base_path}}/band/{{band.id}}/destroy" style="display: inline-block;">
+          <button type="submit" class="btn btn-danger">Poista</button>
+        </form>
+        <a href="{{base_path}}/band/{{band.id}}/edit" class="btn btn-default">Muokkaa</a>
+      </p>
+    {% endif %}
+  {% endif %}
 {% endblock %}

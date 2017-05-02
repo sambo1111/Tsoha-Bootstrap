@@ -1,11 +1,7 @@
 <?php
 
   $routes->get('/', function() {
-    HelloWorldController::index();
-  });
-
-  $routes->get('/hiekkalaatikko', function() {
-    HelloWorldController::sandbox();
+    BandController::index();
   });
 
   $routes->post('/album', function() {
@@ -70,6 +66,16 @@
   $routes->post('/login', function(){
 
     UserController::authenticate_user();
+  });
+
+  $routes->get('/register', function(){
+
+    UserController::create();
+  });
+
+  $routes->post('/register', function(){
+
+    UserController::store();
   });
 
   $routes->get('/user/:id', function($id) {

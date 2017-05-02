@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
+
+  {% if error %}
+    <div class="alert alert-danger">
+      <ul>
+          <li>{{error}}</li>
+      </ul>
+    </div>
+  {% endif %}
+
   <h1>
     {{album.name}}
 
@@ -39,13 +48,18 @@
     </tbody>
   </table>
 
-  <p>
-    <a href="{{base_path}}/track/new/{{album.id}}" class="btn btn-success">Lisää Kappale Albumiin</a>
-  </p>
+  {% if user_logged_in %}
+    {% if user_logged_in.is_admin == 1%}
+      <p>
+        <a href="{{base_path}}/track/new/{{album.id}}" class="btn btn-success">Lisää Kappale Albumiin</a>
+      </p>
 
-  <p>
-    <form method="post" action="{{base_path}}/album/{{album.id}}/destroy" style="display: inline-block;">
-        <button type="submit" class="btn btn-danger">Poista</button>
-    </form>
-  </p>
+      <p>
+        <form method="post" action="{{base_path}}/album/{{album.id}}/destroy" style="display: inline-block;">
+          <button type="submit" class="btn btn-danger">Poista</button>
+        </form>
+      </p>
+    {% endif %}
+  {% endif %}
+
 {% endblock %}

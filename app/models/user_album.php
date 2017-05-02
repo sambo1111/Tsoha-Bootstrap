@@ -47,4 +47,19 @@ class UserAlbum extends BaseModel {
 
   }
 
+  public function check_if_user_has_album($alb_id, $usr_id) {
+
+    $albums = UserAlbum::findUserAlbums($usr_id);
+
+    foreach($albums as $album) {
+
+      if ($album->id == $alb_id) {
+        return true;
+      }
+    }
+
+    return false;
+
+  }
+
 }

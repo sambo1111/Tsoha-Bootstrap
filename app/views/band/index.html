@@ -9,11 +9,23 @@
   </div>
 {% endif %}
 
+{% if message %}
+  <div class="alert alert-success">
+    <ul>
+      <li>{{message}}</li>
+    </ul>
+  </div>
+{% endif %}
+
     <h1>Yhtyeet</h1>
 
-  <p>
-    <a href="{{base_path}}/band/new" class="btn btn-success">Lisää Yhtye</a>
-  </p>
+  {% if user_logged_in %}
+    {% if user_logged_in.is_admin == 1%}
+      <p>
+        <a href="{{base_path}}/band/new" class="btn btn-success">Lisää Yhtye</a>
+      </p>
+    {% endif %}
+  {% endif %}
 
   <table class="table table-striped table-bordered">
     <thead>
