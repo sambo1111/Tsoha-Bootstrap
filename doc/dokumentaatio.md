@@ -25,7 +25,7 @@ Albumien sivulle pääsee linkistä Albumit, jossa on lista tietokannassa olevis
 ![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/K%C3%A4ytt%C3%B6tapauskaavio.jpg)
 
 ## 5. Järjestelmäkaavio
-![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/j%C3%A4rjestelm%C3%A4kaavio.jpg)
+![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/j%C3%A4rjestelm%C3%A4kaavio2.jpg)
 
 
 ## 6. Käyttäjäryhmät
