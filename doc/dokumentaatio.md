@@ -24,7 +24,11 @@ Albumien sivulle pääsee linkistä Albumit, jossa on lista tietokannassa olevis
 
 ![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/K%C3%A4ytt%C3%B6tapauskaavio.jpg)
 
-## 5. Käyttäjäryhmät
+## 5. Järjestelmäkaavio
+![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/j%C3%A4rjestelm%C3%A4kaavio.jpg)
+
+
+## 6. Käyttäjäryhmät
 
 ### Admin
 Sovelluksen ylläpitäjä, jonka tehtäviin kuuluu tietokannan ylläpito eli datan lisäys, poisto ja muokkaus.
@@ -35,7 +39,7 @@ Käyttäjä, joka ei ole vielä rekisteröitynyt sovellukseen.
 ### Rekisteröitynyt käyttäjä
 Käyttäjä, joka on rekisteröitynyt sovellukseen.
 
-## 6. Käyttötapaukset
+## 7. Käyttötapaukset
 
 ### Admin
 - Albumien, muusikoiden, kappaleiden ja yhtyeiden lisäys, poisto ja muokkaus
@@ -50,11 +54,11 @@ Käyttäjä, joka on rekisteröitynyt sovellukseen.
 - Oman albumilistan luominen tietokannassa olevista albumeista
 - Albumien, muusikoiden, kappaleiden ja yhtyeiden tarkastelu
 
-## 7. Relaatiokaavio
+## 8. Relaatiokaavio
 
 ![alt text](https://github.com/sambo1111/Tsoha-Bootstrap/blob/master/doc/TSOHA_RELAATIOKAAVIO.jpg)
 
-## 8. Järjestelmän tietosisältö
+## 9. Järjestelmän tietosisältö
 
 ### Band
 |Attribuutti|Arvojoukko|Kuvailu|
