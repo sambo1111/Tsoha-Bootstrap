@@ -76,7 +76,7 @@ class BandController extends BaseController {
     }
 
     public static function destroy($id) {
-        $band = $band = Band::find($id);
+        $band = Band::find($id);
         $band->destroy();
         Redirect::to('/band/', array('message' => 'Yhtyeen poisto onnistui!'));
     }

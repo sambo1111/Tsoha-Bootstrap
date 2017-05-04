@@ -46,4 +46,35 @@ class TrackController extends BaseController {
 
     }
 
+    public static function edit($id){
+        $track = Track::find($id);
+        View::make('track/edit.html', array('track' => $track));
+    }
+
+    public static function update($id){
+        $params = $_POST;
+
+        $attributes = array(
+          'id' => $id,
+          'name' => $params['name'],
+          'track_length' => $params['track_length']
+        );
+
+        $track = new Track($attributes);
+        $errors = $track->errors();
+
+        if(count($errors) > 0){
+          View::make('track/edit.html', array('errors' => $errors, 'track' => $track));
+        }else{
+          $track->update();
+
+          Redirect::to('/track/' . $track->id, array('message' => 'Kappaleen muokkaus onnistui!'));
+        }
+    }
+
+    public static function destroy($id) {
+        $track = Track::find($id);
+        $track->destroy();
+        Redirect::to('/band/', array('message' => 'Kappaleen poisto onnistui!'));
+    }
 }

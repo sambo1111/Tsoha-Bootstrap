@@ -100,6 +100,20 @@
       TrackController::show($id);
   });
 
+  $routes->get('/track/:id/edit', function($id){
+    TrackController::edit($id);
+  });
+
+  $routes->post('/track/:id/edit', function($id){
+
+    TrackController::update($id);
+  });
+
+  $routes->post('/track/:id/destroy', function($id){
+
+    TrackController::destroy($id);
+  });
+
   $routes->get('/band_member/new/:id', function($id) {
       BandMemberController::create($id);
   });

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Muokkaa Kappaletta </h1>
+
+<form method="post" action="{{base_path}}/track/{{track.id}}/edit">
+    <div class="form-group">
+      <label>Nimi</label>
+      <input type="text" name="name" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Pituus (sec)</label>
+      <input type="text" name="track_length" class="form-control">
+    </div>
+
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">OK</button>
+    </div>
+</form>
+
+{% endblock %}

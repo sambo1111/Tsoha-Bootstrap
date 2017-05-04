@@ -98,6 +98,13 @@ class Track extends BaseModel {
 
     }
 
+    public function update() {
+
+        $query = DB::connection()->prepare('UPDATE Track SET (name, track_length) = (:name, :track_length) WHERE id = :id');
+        $query->execute(array('id' => $this->id ,'name' => $this->name,  'track_length' => $this->track_length));
+
+    }
+
     public function validate_name(){
         $errors = array();
         if($this->name == '' || $this->name == null){
@@ -113,5 +120,11 @@ class Track extends BaseModel {
            $errors[] = 'PItuus ei saa olla tyhjä.';
         }
         return $errors;
+    }
+    public function destroy() {
+
+        $query = DB::connection()->prepare('DELETE FROM Track WHERE id = :id');
+        $query->execute(array('id' => $this->id));
+
     }
 }
